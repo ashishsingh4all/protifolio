@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Ashish |Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== LOADER ===== -->
+    <div id="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-text">Initializing Universe...</div>
+    </div>
+
+    <!-- ===== SKELETON ===== -->
+    <div id="skeleton">
+      <div class="skel-nav">
+        <div class="skel-logo shimmer"></div>
+        <div class="skel-navlinks">
+          <div class="skel-navlink shimmer"></div>
+          <div class="skel-navlink shimmer"></div>
+          <div class="skel-navlink shimmer"></div>
+          <div class="skel-navlink shimmer"></div>
+        </div>
+      </div>
+      <div class="skel-hero">
+        <div class="skel-title shimmer"></div>
+        <div class="skel-sub shimmer"></div>
+        <div class="skel-btns">
+          <div class="skel-btn shimmer"></div>
+          <div class="skel-btn shimmer"></div>
+        </div>
+      </div>
+      <div class="skel-cards">
+        <div class="skel-card shimmer"></div>
+        <div class="skel-card shimmer"></div>
+        <div class="skel-card shimmer"></div>
+      </div>
+    </div>
+
+    <!-- ===== MAIN SITE ===== -->
+    <div id="main-site">
+      <canvas id="spaceCanvas"></canvas>
+
+      <div
+        class="orb3d"
+        style="
+          width: 500px;
+          height: 500px;
+          top: -100px;
+          left: -100px;
+          background: radial-gradient(circle, #7b61ff, transparent);
+        "
+      ></div>
+      <div
+        class="orb3d"
+        style="
+          width: 400px;
+          height: 400px;
+          bottom: -80px;
+          right: -80px;
+          background: radial-gradient(circle, #ff4d8f, transparent);
+          animation-duration: 22s;
+          animation-direction: alternate-reverse;
+        "
+      ></div>
+      <div
+        class="orb3d"
+        style="
+          width: 300px;
+          height: 300px;
+          top: 50%;
+          left: 60%;
+          background: radial-gradient(circle, #00e5ff, transparent);
+          animation-duration: 16s;
+        "
+      ></div>
+
+      <div class="cursor-dot" id="cursorDot"></div>
+      <div class="cursor-outline" id="cursorOutline"></div>
+      <canvas id="particleCanvas"></canvas>
+
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-brands fa-connectdevelop fa-spin-pulse"></i>ASHISH_DEV
+        </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <main>
+        <section id="home" class="hero">
+          <!-- Infinite Marquee -->
+          <div class="marquee-wrap">
+            <div class="marquee-track" id="marqueeTrack"></div>
+          </div>
+
+          <!-- 3D Hero Title -->
+          <div class="hero-title-3d" id="heroTitle3d">ASHISH</div>
+
+          <!-- Infinite Typewriter -->
+          <div class="typewriter-wrap">
+            <span id="animatedName"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-sub">
+            Frontend Alchemist &nbsp;•&nbsp; Anime Dev &nbsp;•&nbsp; UI Sorcerer
+          </p>
+
+          <div class="btn-group">
+            <a href="#projects" class="btn btn-primary"
+              ><span>✨ Explore Universe</span></a
+            >
+            <a href="#contact" class="btn btn-outline">⚡ Connect</a>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <h2 class="section-title reveal">
+            <span>✦ Magical Projects ✦</span>
+          </h2>
+          <div class="projects-grid">
+            <a href="">
+              <div class="card-scene">
+                <div class="project-card reveal" data-tilt>
+                  <div class="project-icon"><i class="fas fa-ghost"></i></div>
+                  <h3>Spirit Realm</h3>
+                  <p>
+                    Interactive 3D spectral journey with WebGL shaders &
+                    ethereal animations.
+                  </p>
+                  </div>
+              </div>
+            </a>
+            <a href="Parallax-Effect/Parallax.html" target="_blank">
+              <div class="card-scene">
+                <div class="project-card reveal" data-tilt>
+                  <div class="project-icon">
+                    <i class="fas fa-feather-alt"></i>
+                  </div>
+                  <h3>The Parallax-Effect</h3>
+                  <p>
+                    Interactive Parallax-Effect with GSAP.js starfields &
+                    reactive animations.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="Hand-Controlled-Particle/index.html" target="_blank">
+              <div class="card-scene">
+                <div class="project-card reveal" data-tilt>
+                  <div class="project-icon">
+                    <i class="fas fa-dice-d20"></i>
+                  </div>
+                  <h3>Hand-Controlled-Partical</h3>
+                  <p>
+                    Anime-inspired VR experience with dynamic particle
+                    constellations.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section id="skills" class="section">
+          <h2 class="section-title reveal">
+            <span>⚡ Enchanted Toolkit ⚡</span>
+          </h2>
+          <div class="skills-wrapper">
+            <div class="skill-tag reveal"><span>React.js</span></div>
+            <div class="skill-tag reveal"><span>Three.js</span></div>
+            <div class="skill-tag reveal"><span>GSAP</span></div>
+            <div class="skill-tag reveal"><span>Framer Motion</span></div>
+            <div class="skill-tag reveal"><span>Tailwind</span></div>
+            <div class="skill-tag reveal"><span>Node.js</span></div>
+            <div class="skill-tag reveal"><span>WebGL</span></div>
+            <div class="skill-tag reveal"><span>UI/UX</span></div>
+            <div class="skill-tag reveal"><span>TypeScript</span></div>
+            <div class="skill-tag reveal"><span>Next.js</span></div>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="contact-container reveal">
+            <h2>Summon the Creator</h2>
+            <p
+              style="
+                margin: 1rem 0;
+                color: rgba(200, 210, 255, 0.65);
+                font-size: 0.95rem;
+              "
+            >
+              Let's craft legendary digital experiences together.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <div style="margin-top: 2rem">
+              <a
+                href="mailto:ashish@creativemagic.me"
+                class="btn btn-primary"
+                style="padding: 0.8rem 2rem"
+                ><span>📧 ashish@creativemagic.me</span></a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          © 2025 ASHISH — where code meets anime aesthetics & infinite
+          creativity ✨
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
